@@ -60,4 +60,33 @@
 # k = 'ноутбук'
 # 12
 
+# k = 'ноутбук'
+# a = list(k.upper())
+# sum = 0
+# x=0
+# d2={'A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т':1, 'Д, К, Л, М, П, У, D, G':2, 'B, C, M, P, Б, Г, Ё, Ь, Я':3,
+#     'F, H, V, W, Y, Й, Ы':4, 'Ж, З, Х, Ц, Ч, K':5, 'J, X, Ш, Э, Ю':8, 'Ф, Щ, Ъ, Q, Z':10}
+# for x in a:    
+#     for i in d2.keys():
+#         for j in range(len(i)):        
+#             if x==i[j]:
+#                 sum +=d2[i]
+# print(sum)
 
+
+# решение автотестов:
+
+# points_en = {1: 'AEIOULNSTR', 2: 'DG', 3: 'BCMP', 4: 'FHVWY', 5: 'K', 8: 'JX', 10: 'QZ'}
+# points_ru = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ', 3: 'БГЁЬЯ', 4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФЩЪ'}
+# word = k.upper()  # переводим все буквы в верхний регистр
+# count = 0
+# for i in word:
+#     if i in 'QWERTYUIOPASDFGHJKLZXCVBNM':
+#         for j in points_en:
+#             if i in points_en[j]:
+#                 count = count + j
+#     else:
+#         for j in points_en:
+#             if i in points_ru[j]:
+#                 count = count + j
+# print(count)

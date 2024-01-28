@@ -33,17 +33,24 @@
 #              "The shells that she sells are sea shells "
 #              "I'm sure.So if she sells sea shells on the sea shore "
 #              "I'm sure that the shells are sea shore shells")
-# print(input_str)
-# input_str = input_str.replace('.' ,' ')
-# print(input_str)
-# input_lst = input_str.split()
-# print(input_lst)
-# for i in range(len(input_lst)):
-#     input_lst[i] = input_lst[i].lower()
-# print(input_lst)
-# print(len(set(input_lst)))
-# print('*' * 15)
-# res = len(set(i.lower() for i in input_str.replace('.' ,' ').split()))
+# input_str = input_str.replace('.' ,' ') #заменили точку на пробел, чтобы те слова, которые разделены не пробелом, а точкой разделились пробелами
+# input_lst = input_str.split() #получаем список из едениц(слов), которые определяются пробелом
+# # for i in range(len(input_lst)): #цикл для добавления в список элементов (слов), чтобы все слова были с маленьких букв
+# #     input_lst[i] = input_lst[i].lower() #lower - делает все буквы маленькие
+# # print(len(set(input_lst))) #печатаем длину преобразованного во множество списка
+
+# #второе решение в одну строку
+# res = len(set(i.lower() for i in input_str.replace('.' ,' ').split())) #все тоже только в одну строку, используя генератор списков
 # print(res)
 
 
+
+
+# import time
+
+# start=time.perf_counter() #время сколько просло с 01.01.1970 года - со времени линукс
+
+# input_str = ("She sells sea shells on the sea shore The shells that she sells are sea shells")
+# res = len(set(i.lower() for i in input_str.replace('.' ,' ').split()))
+
+# print(time.perf_counter()-start) #проверяем время работы кода, поместив код между переменной старт и принт разницей переменной и старта кода
